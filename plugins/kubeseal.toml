@@ -1,0 +1,22 @@
+name = "kubeseal"
+type = "cli"
+
+[platform.linux]
+download-file = "kubeseal-{version}-linux-{arch}.tar.gz"
+
+[platform.macos]
+download-file = "kubeseal-{version}-darwin-{arch}.tar.gz"
+
+[platform.windows]
+download-file = "kubeseal-{version}-windows-{arch}.tar.gz"
+
+[install]
+download-url = "https://github.com/bitnami-labs/sealed-secrets/releases/download/v{version}/{download_file}"
+
+[install.arch]
+arm = "arm"
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/bitnami-labs/sealed-secrets"
