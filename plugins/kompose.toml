@@ -1,0 +1,29 @@
+name = "kompose"
+type = "cli"
+
+[platform.linux]
+download-file = "kompose-linux-{arch}.tar.gz"
+exe-path = "kompose-linux-{arch}"
+checksum-file = "SHA256_SUM"
+
+[platform.macos]
+download-file = "kompose-darwin-{arch}.tar.gz"
+exe-path = "kompose-darwin-{arch}"
+checksum-file = "SHA256_SUM"
+
+[platform.windows]
+download-file = "kompose-windows-{arch}.exe.tar.gz"
+exe-path = "kompose-windows-{arch}.exe"
+checksum-file = "SHA256_SUM"
+
+[install]
+download-url = "https://github.com/kubernetes/kompose/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/kubernetes/kompose/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+arm = "arm"
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/kubernetes/kompose"
